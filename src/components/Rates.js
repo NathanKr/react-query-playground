@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 const Rates = () => {
   const queryKey = "latestRate";
   const latestRateQueryHandler = async () => {
-    const response = await fetch("https://api.ratesapi.io/api/latest");
+    const response = await fetch("https://api.ratesapi1.io/api/latest");
     const data = await response.json();
     return data;
   };
@@ -18,8 +18,8 @@ const Rates = () => {
     return <div>Loading ...</div>;
   }
 
-  if (error) {
-    return <div>{JSON.stringify(error)}</div>;
+  if (status === "error") {
+    return <div>Error...</div>;
   }
 
   return <div>1 EUR is {data.rates.USD} USD</div>;
