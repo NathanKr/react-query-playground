@@ -4,7 +4,7 @@ import { useQuery } from "react-query";
 const Rates = () => {
   const queryKey = "latestRate";
   const latestRateQueryHandler = async () => {
-    const response = await fetch("https://api.ratesapi1.io/api/latest");
+    const response = await fetch("https://api.ratesapi.io/api/latest");
     const data = await response.json();
     return data;
   };
