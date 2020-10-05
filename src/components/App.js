@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import Rates from './Rates'
 import {ReactQueryDevtools} from 'react-query-devtools'
 
