@@ -1,6 +1,9 @@
-import { QueryClient, QueryClientProvider } from "react-query";
 // import "./App.css";
-import Rates from "./Rates";
+import Posts from "./posts";
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 
 const queryClient = new QueryClient();
 
@@ -8,9 +11,9 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <Rates />
+        <Posts />
       </QueryClientProvider>
-     </>
+    </>
   );
 }
 
