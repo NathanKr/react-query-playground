@@ -2,14 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 
 const Posts = () => {
   const queryKey = ["latestPosts"];
-  const latestRateQueryHandler = async () => {
+  const latestPostsQueryHandler = async () => {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
     const data = await response.json();
     return data;
   };
   const { isPending, error, data } = useQuery({
     queryKey,
-    queryFn: latestRateQueryHandler,
+    queryFn: latestPostsQueryHandler,
   });
 
 
